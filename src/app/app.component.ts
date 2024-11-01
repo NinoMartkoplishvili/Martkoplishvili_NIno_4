@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChildUser } from './child-user';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MN4';
+
+
+  childData: any;
+  
+  onChildDataReceived(data: any) {
+    console.log(data);
+    this.childData= data;
+  }
 }
